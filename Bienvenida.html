@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #e0f7ff, #fff6e6);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 3rem;
+      color: #1d4e89;
+    }
+
+    p {
+      margin: 0 0 24px;
+      font-size: 1.2rem;
+      color: #334155;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      width: min(92vw, 920px);
+      margin-bottom: 32px;
+    }
+
+    .image-card {
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.8);
+    }
+
+    .image-card img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .phrase {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      animation-name: fall;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate(-50%, -10%) scale(0.95);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, 110vh) scale(1.05);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Hello World! 🌟</h1>
+  <p>Esta es mi página de bienvenida 💪✨</p>
+
+  <div class="image-grid">
+    <div class="image-card">
+      <img src="https://content.imageresizer.com/images/memes/El-Gato-meme-6.jpg">
+    </div>
+    <div class="image-card">
+      <img src="https://content.imageresizer.com/images/memes/Smiling-Cat-meme-amuvy.jpg">
+    </div>
+    <div class="image-card">
+      <img src="https://content.imageresizer.com/images/memes/research-cat-meme-4.jpg">
+    </div>
+    <div class="image-card">
+      <img src="https://content.imageresizer.com/images/memes/Cool-cat-meme-2.jpg">
+    </div>
+  </div>
+
+  <script>
+    const phrases = [
+      'Nunca te rindas, los grandes logros toman tiempo.',
+      'Cada paso te acerca más a tu meta.',
+      'Lo mejor está por venir, sigue avanzando.',
+      'Eres capaz de cosas increíbles.',
+      'La disciplina hoy es la libertad mañana.',
+      'Confía en ti y en tu proceso.',
+      'Cada día es una nueva oportunidad para crecer.',
+      'Tu actitud define tu dirección.',
+      'Sueña en grande y actúa con constancia.',
+      'El esfuerzo de hoy crea el éxito de mañana.',
+      'Hazlo con amor y verás los resultados.',
+      'La paciencia es la clave del progreso.',
+      'Gay el que lo lea.',
+      'El cambio comienza con un pequeño paso.',
+      'Si puedes soñarlo, puedes lograrlo.',
+      'Pequeños avances son grandes victorias.',
+      'Tu actitud puede transformar cualquier día.',
+      'Abraza los desafíos y sigue adelante.',
+      'El éxito es la suma de buenos hábitos.',
+      'Haz de hoy el primer día de tu nueva historia.',
+      'Levántate con propósito y nunca te detengas.',
+      'Sé amable contigo mismo en el camino.',
+      'Todo gran viaje empieza con una decisión.',
+      'El miedo es solo una señal para crecer.',
+      'Abre tu mente a nuevas posibilidades.',
+      'Aprende de los errores y sigue adelante.',
+      'La constancia vence a la perfección.',
+      'Cree en tu brillo, incluso en los días grises.',
+      'Cada día escribe una nueva página de tu historia.',
+      'Vibra alto y atrae lo mejor.',
+      'Las ideas crecen cuando actúas con fe.',
+      'Inspírate en cada logro, por pequeño que sea.',
+      'La energía positiva transforma tu entorno.',
+      'El presente es tu oportunidad más grande.',
+      'Sé valiente, sé tú y hazlo con pasión.',
+      'Avanza con confianza y serenidad.',
+      'La gratitud multiplica tus bendiciones.',
+      'Rompe tus propios límites con constancia.',
+      'La pasión es el mejor combustible del éxito.',
+      'El trabajo constante siempre da frutos.',
+      'Toma decisiones con corazón y claridad.',
+      'Transforma dudas en decisiones con acción.',
+      'Sonríe ante los retos y hazlos tuyos.',
+      'El poder está en tus pasos de hoy.',
+      'Persiste aunque duela, el resultado llegará.',
+      'que te valga vrg todo we.',
+      'Vive con propósito y cada día será mejor.',
+      'Sigue tu intuición y confía en tu camino.',
+      'Cada intento cuenta, incluso los que fallan.',
+      'El camino se construye paso a paso.',
+      'No te compares, crece a tu propio ritmo.',
+      'Haz del esfuerzo un hábito diario.',
+      'El más pequeño progreso es un gran avance.',
+      'El éxito empieza con una sola acción.',
+      'Sigue aprendiendo con curiosidad cada día.',
+      'Eres tu mejor proyecto en construcción.',
+      'Donde hay constancia hay resultado seguro.',
+      'Cree en el proceso y celebra lo aprendido.',
+      'Tu mejor versión está en camino.',
+      'Hoy es un buen día para empezar de nuevo.',
+      'La confianza se construye sumando pequeños triunfos.',
+      'Cada logro comienza en tu mente.',
+      'Deja que tu trabajo hable por ti.',
+      'La actitud positiva abre puertas nuevas.',
+      'gay el que lo lea.'
+    ];
+
+    function randomValue(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function createRandomPhrase() {
+      const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+      const span = document.createElement('span');
+      span.className = 'phrase';
+      span.textContent = phrase;
+      span.style.left = `${randomValue(5, 95)}%`;
+      span.style.fontSize = `${randomValue(0.9, 1.4)}rem`;
+      span.style.color = `hsl(${randomValue(180, 220)}, 75%, ${randomValue(30, 45)}%)`;
+      span.style.animationDuration = `${randomValue(9, 16)}s`;
+      span.style.animationDelay = `${randomValue(0, 2)}s`;
+      document.body.appendChild(span);
+
+      setTimeout(() => {
+        span.remove();
+      }, 18000);
+    }
+
+    function startCascade(total) {
+      let created = 0;
+      function scheduleNext() {
+        if (created >= total) return;
+        createRandomPhrase();
+        created++;
+        setTimeout(scheduleNext, randomValue(200, 900));
+      }
+      scheduleNext();
+    }
+
+    startCascade(60);
+  </script>
+</body>
